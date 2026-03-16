@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>маленькое послание</title>
+<title>Получить комплимент 💌</title>
 
 <style>
 body{
-background:#f6e9ec;
-font-family:Arial;
-text-align:center;
-padding-top:100px;
+    font-family: Arial;
+    text-align: center;
+    margin-top: 100px;
+    background: #f8efe7;
 }
 
 button{
-display:block;
-margin:15px auto;
-padding:15px 25px;
-font-size:18px;
-border:none;
-border-radius:10px;
-cursor:pointer;
+    padding: 15px 30px;
+    font-size: 20px;
+    background: #e8cfc0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-#result{
-margin-top:40px;
-font-size:22px;
+#compliment{
+    margin-top: 30px;
+    font-size: 24px;
 }
 </style>
 
@@ -32,47 +30,28 @@ font-size:22px;
 
 <body>
 
-<h1>нажми кнопку ✨</h1>
+<h1>Нажми кнопку и получи комплимент ✨</h1>
 
-<button onclick="compliment()">комплимент</button>
-<button onclick="fate()">знак судьбы</button>
-<button onclick="support()">поддержка</button>
+<button onclick="giveCompliment()">Получить</button>
 
-<div id="result"></div>
+<div id="compliment"></div>
 
 <script>
 
-const compliments = [
-"ты сегодня выглядишь потрясающе",
-"у тебя очень красивая энергия",
-"ты сильнее чем думаешь"
+let compliments = [
+"Ты сегодня выглядишь потрясающе",
+"Ты очень умный человек",
+"У тебя отличный вкус",
+"Ты делаешь этот мир немного лучше",
+"Ты очень харизматичный человек",
+"Твоя улыбка реально поднимает настроение",
+"Ты сильнее чем думаешь",
+"Ты заслуживаешь всего самого хорошего"
 ];
 
-const fates = [
-"скоро случится что-то хорошее",
-"ты на правильном пути",
-"доверься процессу"
-];
-
-const supports = [
-"ты справишься",
-"можно отдохнуть",
-"ты делаешь достаточно"
-];
-
-function compliment(){
-let text = compliments[Math.floor(Math.random()*compliments.length)];
-document.getElementById("result").innerText = text;
-}
-
-function fate(){
-let text = fates[Math.floor(Math.random()*fates.length)];
-document.getElementById("result").innerText = text;
-}
-
-function support(){
-let text = supports[Math.floor(Math.random()*supports.length)];
-document.getElementById("result").innerText = text;
+function giveCompliment(){
+let random = compliments[Math.floor(Math.random()*compliments.length)];
+document.getElementById("compliment").innerText = random;
 }
 
 </script>
