@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<title>маленькое послание для тебя</title>
+
+<style>
+
+body{
+background:linear-gradient(180deg,#f6efe9,#f1dede);
+font-family: "Georgia", serif;
+text-align:center;
+padding-top:90px;
+color:#5b4a42;
+}
+
+h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+p{
+opacity:0.7;
+margin-bottom:40px;
+}
+
+button{
+display:block;
+margin:12px auto;
+padding:16px 28px;
+font-size:18px;
+border:none;
+border-radius:16px;
+cursor:pointer;
+width:270px;
+transition:0.25s;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+button:hover{
+transform:scale(1.07);
+}
+
+.compliment{
+background:#e8d3c8;
+}
+
+.fate{
+background:#cfe3d5;
+}
+
+.support{
+background:#e6c9d4;
+}
+
+.wisdom{
+background:#e7e3c9;
+}
+
+.message{
+background:#d7e1f0;
+}
+
+#result{
+margin-top:55px;
+font-size:24px;
+max-width:600px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
+padding:10px;
+}
+
+footer{
+margin-top:90px;
+font-size:14px;
+opacity:0.5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>маленькое послание для тебя ✨</h1>
+<p>иногда вселенной просто нужно нажать кнопку</p>
+
+<button class="compliment" onclick="compliment()">получить комплимент</button>
+
+<button class="fate" onclick="fate()">знак судьбы</button>
+
+<button class="support" onclick="support()">мне нужна поддержка</button>
+
+<button class="wisdom" onclick="wisdom()">случайная мудрость</button>
+
+<button class="message" onclick="message()">сегодняшнее послание</button>
+
+<div id="result"></div>
+
+<footer>
+made with softness 🌿
+</footer>
+
+<script>
+
+let compliments = [
+"ты сегодня выглядишь потрясающе",
+"у тебя очень красивая энергия",
+"ты умнее чем думаешь",
+"ты делаешь мир немного мягче",
+"твоя улыбка может спасти чей-то день",
+"ты заслуживаешь хороших вещей",
+"ты очень интересный человек",
+"у тебя хороший вкус",
+"ты сильнее чем думаешь",
+"людям рядом с тобой спокойно"
+];
+
+let fate = [
+"то что ты ищешь — тоже ищет тебя",
+"скоро случится что-то хорошее",
+"доверяй процессу",
+"иногда задержки — это защита",
+"ты на правильном пути",
+"всё начинает складываться",
+"маленький шаг изменит многое",
+"иногда случайности — это подсказки"
+];
+
+let support = [
+"ты делаешь достаточно",
+"можно отдохнуть",
+"ты не обязан быть идеальным",
+"иногда просто прожить день — уже победа",
+"ты справишься",
+"ты не один",
+"с тобой всё в порядке",
+"можно быть уставшим"
+];
+
+let wisdom = [
+"медленно — тоже движение",
+"простые вещи часто самые важные",
+"иногда ответ приходит в тишине",
+"сравнение крадёт радость",
+"маленькие привычки меняют жизнь",
+"мир не требует идеальности"
+];
+
+let message = [
+"сегодня хороший день начать что-то",
+"напиши тому человеку",
+"сделай паузу",
+"выпей воды",
+"прогуляйся немного",
+"улыбнись себе",
+"ты заслуживаешь мягкости"
+];
+
+function randomText(list){
+let random = list[Math.floor(Math.random()*list.length)];
+document.getElementById("result").innerText=random;
+}
+
+function compliment(){
+randomText(compliments);
+}
+
+function fate(){
+randomText(fate);
+}
+
+function support(){
+randomText(support);
+}
+
+function wisdom(){
+randomText(wisdom);
+}
+
+function message(){
+randomText(message);
+}
+
+</script>
+
+</body>
+</html>
